@@ -519,7 +519,7 @@ ControllerES9018K2M.prototype.setIirFilter = function(selected) {
 
   self.iir = selected.value;
   self.iirLabel = selected.label;
-  switch(selected) {
+  switch(selected.value) {
     case 0:                        // IIR Bandwidth: Normal 47K (for PCM)
       self.reg7=self.bitclear(self.reg7,2);     // x x x x 0 0 x x
       self.reg7=self.bitclear(self.reg7,3);
